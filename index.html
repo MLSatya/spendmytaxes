@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Spend My Taxes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+      <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+      <!-- Numeric JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js"></script>
+</head>
+
+<body onload="finishTable();">
+    <div class="container">
+        <div class="top_section">
+            <h1>What If?</h1>
+            <p><img src="budget2020piechart.png" alt="2020 US Discretionary Budegt Request" style="width: 45%; height: auto; float:left; padding:5px;"/>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+        </div>
+        <div class="row">
+             <h1>How Would You Spend Your Tax Dollars?</h1>
+            <p>Interactive .... How to ?, etc. </p>
+            <div class="col-md-6">
+                <div id="plotly-div"><!-- Plotly chart will be drawn inside this DIV -->
+            <script> 
+                <!-- JAVASCRIPT CODE GOES HERE -->
+                    
+                     trace1 = {
+                      direction: 'counterclockwise', 
+                      hole: 0.54, 
+                      hoverinfo: 'percent+label', 
+                      labels: ['Transportation', 'Agriculture', 'Treasury', 'Interior', 'Commerce', 'Labor', 'Defense', 'Veterans Affairs', 'Health & Human Services', 'Education', 'Homeland Security', 'Housing & Urban Development', 'State & International', 'Energy', 'Justice'], 
+                      labelssrc: 'mlsatya:15:214ea2', 
+                      marker: {line: {
+                          color: 'rgb(25, 38, 77)', 
+                          width: 1
+                        }}, 
+                      name: 'trace1', 
+                      pull: 0, 
+                      rotation: 0, 
+                      showlegend: true, 
+                      sort: true, 
+                      text: ['Transportation', 'Agriculture', 'Treasury', 'Interior', 'Commerce', 'Labor', 'Defense', 'Veterans Affairs', 'Health & Human Services', 'Education', 'Homeland Security', 'Housing & Urban Development', 'State & International', 'Energy', 'Justice'], 
+                      textfont: {family: 'Droid Sans'}, 
+                      textinfo: 'percent', 
+                      textposition: 'middle center', 
+                      textsrc: 'mlsatya:15:214ea2', 
+                      type: 'pie', 
+                      values: [0.02, 0.02, 0.01, 0.01, 0.01, 0.01, 0.57, 0.07, 0.05, 0.05, 0.04, 0.04, 0.03, 0.03, 0.02], 
+                      valuessrc: 'mlsatya:15:d15a17'
+                    };
+                    data = [trace1];
+                    layout = {
+                      annotations: [
+                        {text: '<br>'}
+                      ], 
+                      autosize: true, 
+                      legend: {
+                        font: {family: 'Droid Sans'}, 
+                        xanchor: 'auto'
+                      }, 
+                      showlegend: true, 
+                      title: {text: '2020 US Discretionary Budget Request'}, 
+                      xaxis: {
+                        autorange: true, 
+                        range: [-1, 6]
+                      }, 
+                      yaxis: {
+                        autorange: true, 
+                        range: [-1, 4]
+                      }
+                    };
+                    Plotly.plot('plotly-div', {
+                      data: data,
+                      layout: layout
+                    });
+                </script>
+                </div>
+            </div>
+            <div class="col-md-6">
+                 <form action="post.php" method="post">
+                        <fieldset>
+                            <legend>
+                                <h4>Spend Your Tax Money</h4>
+                                <p>Spend your tax dollars whereever you like, as long as the sum totals 100</p>
+                            </legend>
+                            <div class="form-group">
+                                <label>Transportation:</label>
+                                <input type="number" class="form-control prc"/>  
+                            </div>
+                            <div class="form-group">
+                                <label>Agriculture:</label>
+                                <input type="number" class="form-control prc"/> 
+                            </div>
+                            <div class="form-group">
+                                <label>Treasury:</label>
+                                <input type="number" class="form-control prc"/> 
+                            </div>
+                            <div class="form-group">
+                                <label>Interior:</label>
+                                <input type="number" class="form-control prc"/> 
+                            </div>
+                            <div class="form-group">
+                                <label>Commerce:</label>
+                                <input type="number" class="form-control prc"/> 
+                            </div>
+                            <div class="form-group">
+                                <label>Labor:</label>
+                                <input type="number" class="form-control prc"/> 
+                            </div>
+                            <div class="form-group">
+                                <label>Defense:</label>
+                                <input type="number" class="form-control prc"/> 
+                            </div>
+                            <div class="form-group">
+                                <label>Veterans Affairs:</label>
+                                <input type="number" class="form-control prc"/> 
+                            </div>
+                             <div class="form-group">
+                                <label>Health & Human Services:</label>
+                                <input type="number" class="form-control prc"/> 
+                            </div>
+                            <div class="form-group">
+                                <label>Education:</label>
+                                <input type="number" class="form-control prc"/> 
+                            </div>
+                            <div class="form-group">
+                                <label>Homeland Security:</label>
+                                <input type="number" class="form-control prc"/> 
+                            </div>
+                            <div class="form-group">
+                                <label>Housing & Urban Development:</label>
+                                <input type="number" class="form-control prc"/> 
+                            </div>
+                            <div class="form-group">
+                                <label>Energy:</label>
+                                <input type="number" class="form-control prc"/> 
+                            </div>
+                            <div class="form-group">
+                                <label>Justice:</label>
+                                <input type="number" class="form-control prc"/> 
+                            </div>
+                            <div class="form-group">
+                                <label>Total:</label>
+                                <output id="result" class="form-control prc"/> 
+                            </div>
+                        </fieldset>
+                    </form>
+                        <script>
+                            $('.form-group').on('input','.prc',function(event) {
+                                var totalSum = 0;
+                                var currentInput = event.target;
+                  
+                                $('.form-group input.prc').each(function() {
+                                var inputVal = $(this).val();
+                                    if($.isNumeric(inputVal)){
+                                    totalSum += parseFloat(inputVal);
+
+                                    if (totalSum > 100) {
+                                    totalSum -= currentInput.value;
+                                    currentInput.value = "";                 
+                                    }
+                                }
+
+                                });
+                                    $('#result').text(totalSum);
+                                    });
+                        </script>
+                    </div>
+                </div>
+    
+    
+    
+</body>    
